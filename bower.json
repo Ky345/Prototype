@@ -1,0 +1,26 @@
+{
+  "name": "prototype",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "~4.0.0-alpha.6",
+    "modernizr": "~2.8.1",
+    "jquery-ui": "^1.12.1",
+    "fullpage.js": "^2.9.2",
+    "animate.css": "^3.5.2",
+    "radial-progress-chart": "^0.0.4",
+    "d3.v3.min": "https://d3js.org/d3.v3.min.js"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "scss/bootstrap.scss",
+        "dist/js/bootstrap.js",
+        "dist/css/bootstrap.css"
+      ]
+    }
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
+}

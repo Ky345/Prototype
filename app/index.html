@@ -1,0 +1,219 @@
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Prototype</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="/bower_components/fullpage.js/dist/jquery.fullpage.css" />
+    <link rel="stylesheet" href="/bower_components/animate.css/animate.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+  </head>
+  <body>
+    <!--[if IE]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    
+    <nav class="navbar">
+      <div class="container">
+        <ul>
+          <li data-menuanchor="firstpage">
+            <a id="homepage" href="#firstPage">home.</a>
+          </li>
+          <li data-menuanchor="skills">
+            <a id="skillspage" href="#skills">skills.</a>
+          </li>
+          <li data-menuanchor="work">
+            <a id="experiencepage" href="#experience">experience.</a>
+          </li>
+          <li data-menuanchor="about">
+            <a id="aboutpage" href="#about">about.</a>
+          </li>
+        </ul
+      </div>
+    </nav>
+    <div id="fullpage">
+      <div class="section">
+        <div class="container">
+          <h1 class="intro"><span id="hello">hello</span><span id="period">.</span></h1>
+          <h2 class="intro" id="myName">My name is Kyle Lemire, and I'm a <span>Web Developer.</span></h2>
+          <a href="#skills"><img id="scroll" class="bounce" src="images/down-arrow.png"/></a>
+        </div>
+      </div>
+      <div class="section">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-md-6">
+              <h1 class="skills">I<br>got skills.</h1>
+            </div>
+            <div class="col-xs-12 col-md-6">
+              <div class="graphs" id="html"></div>
+              <div class="graphs" id="css"></div>
+              <div class="graphs" id="wp"></div>
+              <div class="graphs" id="js"></div>
+              <div class="graphs" id="php"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-md-6">
+              <div id="education">
+                <h1>Education</h1>
+                <p>Bachelor of Arts: Web Design<br>
+                University of Central Florida</p>
+              </div>
+              <hr>
+              <div id="history">
+                <h1>Work History</h1>
+                <p><strong>Elyk Innovation</strong><br>
+                <strong>Web Developer</strong> &mdash; 08/2012 to Current</p>
+                <ul id="work">
+                  <li>Conceptualized, planned and executed original designs for a wide range of website properties using WordPress.</li>
+                  <li>Used site analytics and metrics to define and monitor success.</li>
+                  <li>Conducted usability testing and post-deployment evaluations to measure user experience success.</li>
+                  <li>Provided continued maintenance and updates to site content and features post-launch.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xs-12 col-md-6 gallery">
+              <ul>
+                <a href="#" class="close"></a>
+                <li>
+                  <a href="#item01">
+                    <img class="img-responsive" src="images/gruotolo-thin.jpg" alt=""/>
+                  </a>
+                </li>
+                <li>
+                  <a href="#item02">
+                    <img class="img-responsive" src="images/johnsonlighting-thin.jpg" alt="">
+                  </a>
+                </li>
+                <li>
+                  <a href="#item03">
+                    <img class="img-responsive" src="images/floridabargecorp-thin.jpg" alt="">
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div id="item01" class="port">
+  
+              <div class="desc-row">
+                <div class="description">
+                  <h1>Item 01</h1>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis libero erat. Integer ac purus est. Proin erat mi, pulvinar ut magna eget, consectetur auctor turpis.</p>
+                </div>
+
+                  <img class="img-responsive" src="images/gruotolo-thumb.jpg" alt="">
+              </div>
+            </div>
+            <div id="item02" class="port">
+  
+              <div class="desc-row">
+                <div class="description">
+                  <h1>Item 02</h1>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis libero erat. Integer ac purus est. Proin erat mi, pulvinar ut magna eget, consectetur auctor turpis.</p>
+                </div>
+
+                  <img class="img-responsive" src="images/johnsonlighting-thumb.jpg" alt="">
+              </div>
+            </div>
+            <div id="item03" class="port">
+  
+              <div class="desc-row">
+                <div class="description">
+                  <h1>Item 03</h1>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis libero erat. Integer ac purus est. Proin erat mi, pulvinar ut magna eget, consectetur auctor turpis.</p>
+                </div>
+
+                  <img class="img-responsive" src="images/floridabargecorp-thumb.jpg" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="row">
+          <div class="col-xs-12 col-md-6">
+            <div id="bio">
+              <h1>Get in touch with me.</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in ultrices ipsum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus egestas lacus nisl, sed aliquam urna suscipit at. Fusce sit amet rhoncus nisl. Cras a nisi dolor. Proin eget neque a purus commodo tincidunt eget id nisi. Curabitur cursus eros lacus, at pellentesque justo tempus eu. Sed dolor nisi, ullamcorper elementum sem et, bibendum condimentum diam. Pellentesque facilisis, metus ut rutrum ullamcorper, ligula augue tempus erat, at viverra purus quam quis velit. Aenean vel massa eget sem viverra tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-6">
+            <div id="contact">
+              <form>
+                <p>Name</p>
+                <input type="text" required/><br>
+                <p>Email</p>
+                <input type="email" required/><br>
+                <p>Message</p>
+                <textarea rows="4" cols="50" required/>
+                </textarea><br>
+                <input type="submit" name="submit" value="Submit"/>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='https://www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/tether/dist/js/tether.js"></script>
+    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <script src="/bower_components/jquery-ui/jquery-ui.js"></script>
+    <script src="/bower_components/fullpage.js/dist/jquery.fullpage.js"></script>
+    <script src="/bower_components/radial-progress-chart/dist/radial-progress-chart.js"></script>
+    <script src="/bower_components/d3.v3.min/index.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    
+    <!-- build:js scripts/plugins.js -->
+    <script src="/bower_components/bootstrap/js/dist/util.js"></script>
+    <script src="/bower_components/bootstrap/js/dist/alert.js"></script>
+    <script src="/bower_components/bootstrap/js/dist/button.js"></script>
+    <script src="/bower_components/bootstrap/js/dist/carousel.js"></script>
+    <script src="/bower_components/bootstrap/js/dist/collapse.js"></script>
+    <script src="/bower_components/bootstrap/js/dist/dropdown.js"></script>
+    <script src="/bower_components/bootstrap/js/dist/modal.js"></script>
+    <script src="/bower_components/bootstrap/js/dist/scrollspy.js"></script>
+    <script src="/bower_components/bootstrap/js/dist/tab.js"></script>
+    <script src="/bower_components/bootstrap/js/dist/tooltip.js"></script>
+    <script src="/bower_components/bootstrap/js/dist/popover.js"></script>
+    <!-- endbuild -->
+    
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>
