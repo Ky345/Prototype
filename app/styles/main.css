@@ -353,6 +353,7 @@ body {
 .gallery ul {
   padding-top: 50px;
   position: relative;
+  display: inline;
 }
 .gallery ul li {
   margin-bottom: 20px;
