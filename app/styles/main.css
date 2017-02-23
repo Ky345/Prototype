@@ -137,8 +137,8 @@ nav a:hover {
   padding-bottom: 2px;
 }
 
-#fp-nav ul li a span {
-    background-color: white;
+#fp-nav.right {
+    display: none !important;
 }
 
 .fp-tooltip {
@@ -353,7 +353,6 @@ body {
 .gallery ul {
   padding-top: 50px;
   position: relative;
-  display: inline;
 }
 .gallery ul li {
   margin-bottom: 20px;
@@ -410,13 +409,13 @@ body {
 .port {
   position: absolute;
   width: 100%;
-  top: 0;
+  top: -50vh;
   left: 0;
   padding-top: 100px;
   background: #ffffff;
   background-color: #fafafa;
   z-index: 103;
-  visibility: hidden;
+  visibility: visible;
   -webkit-transform: translateY(-100%);
   transform: translateY(-100%);
   border-bottom: 1px solid #d0d0d0;
@@ -448,8 +447,7 @@ body {
 }
 .port.item_open {
   visibility: visible;
-  -webkit-transform: translateY(0%);
-  transform: translateY(0%);
+  top: 64vh;
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
@@ -535,4 +533,24 @@ form textarea {
 
 .skills, #education, #history, #contact, #bio {
   animation-duration: .75s;
+}
+
+a:focus {
+  text-decoration: none;
+}
+
+.underlined:focus {
+  text-decoration: underline;
+}
+
+.fp-controlArrow.fp-prev {
+  border-color: transparent #333 transparent transparent; 
+}
+
+.fp-controlArrow.fp-next {
+  border-color: transparent transparent transparent #333;
+}
+
+.slide img {
+  width: 100%;
 }

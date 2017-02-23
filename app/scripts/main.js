@@ -143,9 +143,9 @@ $('#fullpage').fullpage({
   paddingTop: '3em',
   paddingBottom: '10px',
   fixedElements: '#header, .footer',
-  responsiveWidth: 0,
+  responsiveWidth: 768,
   responsiveHeight: 0,
-  responsiveSlides: false,
+  responsiveSlides: true,
 
   //Custom selectors
   sectionSelector: '.section',
@@ -184,59 +184,99 @@ $('#fullpage').fullpage({
 	    php.update(1);
 	    php.update(75);
     }
-    if(nextIndex == 2 && index < nextIndex) {
-    	$('.skills').removeClass('fadeOut animated').addClass('slideInUp animated');
-    }
-    if(nextIndex == 2 && index > nextIndex) {
-      $('.skills').removeClass('fadeOut animated').addClass('slideInDown animated');
-    }
-    if(nextIndex != 2) {
-    	$('.skills').removeClass('slideInUp slideInDown animated').addClass('fadeOut animated');
-    }
-    if(nextIndex == 3 && index < nextIndex) {
-    	$('#education').removeClass('fadeOut animated').addClass('slideInUp animated');
-    	$('#history').removeClass('fadeOut animated').addClass('slideInUp animated');
-    }
-    if(nextIndex == 3 && index > nextIndex) {
-      $('#education').removeClass('fadeOut animated').addClass('slideInDown animated');
-      $('#history').removeClass('fadeOut animated').addClass('slideInDown animated');
-    }
-    if(nextIndex != 3) {
-    	$('#education').removeClass('slideInUp slideInDown animated').addClass('fadeOut animated');
-    	$('#history').removeClass('slideInUp slideInDown animated').addClass('fadeOut animated');
-    }
-    if(nextIndex == 4 && index < nextIndex) {
-      $('#contact').removeClass('fadeOut animated').addClass('slideInUp animated');
-      $('#bio').removeClass('fadeOut animated').addClass('slideInUp animated');
+ 
+    if($(window).width() > 768) {
+      if(nextIndex == 2 && index < nextIndex) {
+      	$('.skills').removeClass('fadeOut animated').addClass('slideInUp animated');
+      }
+      if(nextIndex == 2 && index > nextIndex) {
+        $('.skills').removeClass('fadeOut animated').addClass('slideInDown animated');
+      }
+      if(nextIndex != 2) {
+      	$('.skills').removeClass('slideInUp slideInDown animated').addClass('fadeOut animated');
+      }
+      if(nextIndex == 3 && index < nextIndex) {
+      	$('#education').removeClass('fadeOut animated').addClass('slideInUp animated');
+      	$('#history').removeClass('fadeOut animated').addClass('slideInUp animated');
+      }
+      if(nextIndex == 3 && index > nextIndex) {
+        $('#education').removeClass('fadeOut animated').addClass('slideInDown animated');
+        $('#history').removeClass('fadeOut animated').addClass('slideInDown animated');
+      }
+      if(nextIndex != 3) {
+      	$('#education').removeClass('slideInUp slideInDown animated').addClass('fadeOut animated');
+      	$('#history').removeClass('slideInUp slideInDown animated').addClass('fadeOut animated');
+      }
+      if(nextIndex == 4 && index < nextIndex) {
+        $('#contact').removeClass('fadeOut animated').addClass('slideInUp animated');
+        $('#bio').removeClass('fadeOut animated').addClass('slideInUp animated');
 
+      }
+      if(nextIndex != 4) {
+        $('#contact').removeClass('slideInUp animated').addClass('fadeOut animated');
+        $('#bio').removeClass('slideInUp animated').addClass('fadeOut animated');
+      }
     }
-    if(nextIndex != 4) {
-      $('#contact').removeClass('slideInUp animated').addClass('fadeOut animated');
-      $('#bio').removeClass('slideInUp animated').addClass('fadeOut animated');
-    }
-
     $('.port, .gallery ul').removeClass('item_open');
 
+    if(nextIndex == 1){
+      $('#homepage').addClass('underlined');
+      $('#skillspage').removeClass('underlined');
+      $('#experiencepage').removeClass('underlined');
+      $('#aboutpage').removeClass('underlined');
+    }
+    if(nextIndex == 2){
+      $('#homepage').removeClass('underlined');
+      $('#skillspage').addClass('underlined');
+      $('#experiencepage').removeClass('underlined');
+      $('#aboutpage').removeClass('underlined');
+    }
+    if(nextIndex == 3){
+      $('#homepage').removeClass('underlined');
+      $('#skillspage').removeClass('underlined');
+      $('#experiencepage').addClass('underlined');
+      $('#aboutpage').removeClass('underlined');
+    }
+    if(nextIndex == 4){
+      $('#homepage').removeClass('underlined');
+      $('#skillspage').removeClass('underlined');
+      $('#experiencepage').removeClass('underlined');
+      $('#aboutpage').addClass('underlined');
+    }
   },
   afterLoad: function(anchorLink, index){
-   /* if(index == 1){
-      $('#homepage').addClass("underlined");
-      $("#skillspage").removeClass("underlined");
-      $("#experiencespage").removeClass("underlined");
-      $("#aboutpage").removeClass("underlined");
+    if(index == 1){
+      $('#homepage').addClass('underlined');
+      $('#skillspage').removeClass('underlined');
+      $('#experiencepage').removeClass('underlined');
+      $('#aboutpage').removeClass('underlined');
     }
     if(index == 2){
-      $("#homepage").removeClass("underlined");
-      $("#skillspage").addClass("underlined");
-      $("#experiencespage").removeClass("underlined");
-      $("#aboutpage").removeClass("underlined");
-    }*/
+      $('#homepage').removeClass('underlined');
+      $('#skillspage').addClass('underlined');
+      $('#experiencepage').removeClass('underlined');
+      $('#aboutpage').removeClass('underlined');
+    }
+    if(index == 3){
+      $('#homepage').removeClass('underlined');
+      $('#skillspage').removeClass('underlined');
+      $('#experiencepage').addClass('underlined');
+      $('#aboutpage').removeClass('underlined');
+    }
+    if(index == 4){
+      $('#homepage').removeClass('underlined');
+      $('#skillspage').removeClass('underlined');
+      $('#experiencepage').removeClass('underlined');
+      $('#aboutpage').addClass('underlined');
+    }
   },
   afterRender: function(){},
   afterResize: function(){},
   afterResponsive: function(isResponsive){},
   afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
-  onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
+  onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){
+    
+  }
 });
 /* End fullPage.js */
 
