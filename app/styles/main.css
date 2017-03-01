@@ -17,13 +17,42 @@ h1 {
 }
 
 p {
-  font-size: 2rem;
+  font-size: 1.75rem;
 }
+
+
+@media only screen and (max-width: 414px) {
+  h1 {
+    font-size: 4.5rem;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  h1 {
+    font-size: 4rem;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+}
+
 
 h1.intro {
   font-family: 'Montserrat', sans-serif;
   font-weight: 900;
   font-size: 15em;
+}
+
+@media only screen and (max-width: 414px) {
+  h1.intro {
+    font-size: 12rem;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  h1.intro {
+    font-size: 10rem;
+  }
 }
 
 h1.skills {
@@ -32,9 +61,28 @@ h1.skills {
   font-size: 15em;
 }
 
+@media only screen and (max-width: 768px) {
+  h1.skills {
+    font-size: 11.5rem;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  h1.skills {
+    font-size: 11rem;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  h1.skills {
+    font-size: 10rem;
+  }
+}
+
 ul#work {
   font-size: 1.5rem;
   line-height: 25px;
+  padding-left: 25px;
 }
 
 ul#work li {
@@ -56,6 +104,15 @@ h2.intro {
   font-size: 1.91rem;
   position: relative;
   right: -100vw;
+}
+
+@media only screen and (max-width: 320px) {
+  h1.intro {
+    font-size: 8rem;
+  }
+  h2.intro {
+    font-size: 1.5rem;
+  }
 }
 
 h2.intro span {
@@ -130,6 +187,18 @@ nav a:hover {
   display: inline;
   font-size: 2.2rem;
   margin-right: 20px;
+}
+
+@media only screen and (max-width: 375px) {
+  .navbar ul li {
+    font-size: 1.9rem;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .navbar ul li {
+    font-size: 1.6rem;
+  }
 }
 
 .navbar ul li a {
@@ -516,15 +585,28 @@ form textarea {
   font-size: 18px;
 }
 
-#bio h1 {
+
+@media only screen and (max-width: 414px) {
+  #bio {
+    margin-top: 30px;
+  }
+}
+
+#get-in-touch h1 {
   font-size: 4.5em;
   font-family: Montserrat, sans-serif;
   font-weight: 900;
   margin-bottom: 20px;
 }
 
-#bio {
+#get-in-touch {
   color: white;
+}
+
+@media only screen and (max-width: 1024px) {
+  #get-in-touch h1 {
+    font-size: 4em;
+  }
 }
 
 #contact {
@@ -545,12 +627,20 @@ a:focus {
 
 .fp-controlArrow.fp-prev {
   border-color: transparent #333 transparent transparent; 
+  border-width: 28.5px 20px 28.5px 0;
+  left: 2px;
 }
 
 .fp-controlArrow.fp-next {
   border-color: transparent transparent transparent #333;
+  border-width: 28.5px 0 28.5px 20px;
+  right: 2px;
 }
 
 .slide img {
   width: 100%;
+}
+
+.section .container {
+  padding: 30px;
 }

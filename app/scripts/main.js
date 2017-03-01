@@ -143,9 +143,8 @@ $('#fullpage').fullpage({
   paddingTop: '3em',
   paddingBottom: '10px',
   fixedElements: '#header, .footer',
-  responsiveWidth: 768,
+  responsiveWidth: 1100,
   responsiveHeight: 0,
-  responsiveSlides: true,
 
   //Custom selectors
   sectionSelector: '.section',
@@ -185,7 +184,7 @@ $('#fullpage').fullpage({
 	    php.update(75);
     }
  
-    if($(window).width() > 768) {
+    if($(window).width() > 1100) {
       if(nextIndex == 2 && index < nextIndex) {
       	$('.skills').removeClass('fadeOut animated').addClass('slideInUp animated');
       }
@@ -198,26 +197,27 @@ $('#fullpage').fullpage({
       if(nextIndex == 3 && index < nextIndex) {
       	$('#education').removeClass('fadeOut animated').addClass('slideInUp animated');
       	$('#history').removeClass('fadeOut animated').addClass('slideInUp animated');
+        $('#bio').removeClass('fadeOut animated').addClass('slideInUp animated');
       }
       if(nextIndex == 3 && index > nextIndex) {
         $('#education').removeClass('fadeOut animated').addClass('slideInDown animated');
         $('#history').removeClass('fadeOut animated').addClass('slideInDown animated');
+        $('#bio').removeClass('fadeOut animated').addClass('slideInDown animated');
       }
       if(nextIndex != 3) {
       	$('#education').removeClass('slideInUp slideInDown animated').addClass('fadeOut animated');
       	$('#history').removeClass('slideInUp slideInDown animated').addClass('fadeOut animated');
+        $('#bio').removeClass('slideInUp slideInDown animated').addClass('fadeOut animated');
       }
       if(nextIndex == 4 && index < nextIndex) {
         $('#contact').removeClass('fadeOut animated').addClass('slideInUp animated');
-        $('#bio').removeClass('fadeOut animated').addClass('slideInUp animated');
+        $('#get-in-touch').removeClass('fadeOut animated').addClass('slideInUp animated');
 
       }
       if(nextIndex != 4) {
         $('#contact').removeClass('slideInUp animated').addClass('fadeOut animated');
-        $('#bio').removeClass('slideInUp animated').addClass('fadeOut animated');
+        $('#get-in-touch').removeClass('slideInUp animated').addClass('fadeOut animated');
       }
-    }
-    $('.port, .gallery ul').removeClass('item_open');
 
     if(nextIndex == 1){
       $('#homepage').addClass('underlined');
@@ -243,31 +243,37 @@ $('#fullpage').fullpage({
       $('#experiencepage').removeClass('underlined');
       $('#aboutpage').addClass('underlined');
     }
+  }
   },
   afterLoad: function(anchorLink, index){
-    if(index == 1){
-      $('#homepage').addClass('underlined');
-      $('#skillspage').removeClass('underlined');
-      $('#experiencepage').removeClass('underlined');
-      $('#aboutpage').removeClass('underlined');
+    if($(window).width() < 1100) {
+      $('.not-first').addClass('fp-auto-height');
     }
-    if(index == 2){
-      $('#homepage').removeClass('underlined');
-      $('#skillspage').addClass('underlined');
-      $('#experiencepage').removeClass('underlined');
-      $('#aboutpage').removeClass('underlined');
-    }
-    if(index == 3){
-      $('#homepage').removeClass('underlined');
-      $('#skillspage').removeClass('underlined');
-      $('#experiencepage').addClass('underlined');
-      $('#aboutpage').removeClass('underlined');
-    }
-    if(index == 4){
-      $('#homepage').removeClass('underlined');
-      $('#skillspage').removeClass('underlined');
-      $('#experiencepage').removeClass('underlined');
-      $('#aboutpage').addClass('underlined');
+    if($(window).width() > 1100) {
+      if(index == 1){
+        $('#homepage').addClass('underlined');
+        $('#skillspage').removeClass('underlined');
+        $('#experiencepage').removeClass('underlined');
+        $('#aboutpage').removeClass('underlined');
+      }
+      if(index == 2){
+        $('#homepage').removeClass('underlined');
+        $('#skillspage').addClass('underlined');
+        $('#experiencepage').removeClass('underlined');
+        $('#aboutpage').removeClass('underlined');
+      }
+      if(index == 3){
+        $('#homepage').removeClass('underlined');
+        $('#skillspage').removeClass('underlined');
+        $('#experiencepage').addClass('underlined');
+        $('#aboutpage').removeClass('underlined');
+      }
+      if(index == 4){
+        $('#homepage').removeClass('underlined');
+        $('#skillspage').removeClass('underlined');
+        $('#experiencepage').removeClass('underlined');
+        $('#aboutpage').addClass('underlined');
+      }
     }
   },
   afterRender: function(){},
