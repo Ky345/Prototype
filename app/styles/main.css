@@ -13,7 +13,13 @@ html {
 }
 
 h1 {
-  font-size: 5.5rem;
+  font-size: 4.8rem;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
 }
 
 p {
@@ -76,6 +82,12 @@ h1.skills {
 @media only screen and (max-width: 375px) {
   h1.skills {
     font-size: 10rem;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  h1.skills {
+    font-size: 9rem;
   }
 }
 
@@ -642,5 +654,11 @@ a:focus {
 }
 
 .section .container {
-  padding: 30px;
+  padding: 25px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .navbar {
+    background-color: #7F00BA;
+  }
 }

@@ -114,7 +114,7 @@ $('#fullpage').fullpage({
   easingcss3: 'ease',
   loopBottom: false,
   loopTop: false,
-  loopHorizontal: true,
+  loopHorizontal: false,
   continuousVertical: false,
   continuousHorizontal: false,
   scrollHorizontally: false,
@@ -154,23 +154,7 @@ $('#fullpage').fullpage({
 
   //events
   onLeave: function(index, nextIndex, direction){
-    if(nextIndex == 1 || nextIndex == 4) {
-      $('.navbar ul li a').animate({
-        color: 'white'
-      },600);
-      $('#fp-nav span').animate({
-        backgroundColor: 'white'
-      },350);
-
-    }
-    else {
-      $('.navbar ul li a').animate({
-        color: 'black'
-      },600);
-      $('#fp-nav span').animate({
-        backgroundColor: '#333'
-      },350);
-    }
+    
     if(nextIndex == 2) {
     	html.update(1);
 	    html.update(100);
@@ -185,6 +169,24 @@ $('#fullpage').fullpage({
     }
  
     if($(window).width() > 1100) {
+      if(nextIndex == 1 || nextIndex == 4) {
+        $('.navbar ul li a').animate({
+          color: 'white'
+        },600);
+        $('#fp-nav span').animate({
+          backgroundColor: 'white'
+        },350);
+
+      }
+      else {
+        $('.navbar ul li a').animate({
+          color: 'black'
+        },600);
+        $('#fp-nav span').animate({
+          backgroundColor: '#333'
+        },350);
+      }
+      
       if(nextIndex == 2 && index < nextIndex) {
       	$('.skills').removeClass('fadeOut animated').addClass('slideInUp animated');
       }
