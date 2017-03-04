@@ -1,7 +1,7 @@
-setTimeout(function(){
-        $('body').addClass('loaded');
-        hello();
-    }, 3000);
+window.addEventListener('load', function(){
+    $('body').addClass('loaded');
+    hello();
+});
 
 var html = new RadialProgressChart('#html', {
   diameter: 200,
