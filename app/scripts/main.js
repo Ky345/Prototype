@@ -1,3 +1,8 @@
+setTimeout(function(){
+        $('body').addClass('loaded');
+        hello();
+    }, 3000);
+
 var html = new RadialProgressChart('#html', {
   diameter: 200,
   max: 100,
@@ -9,7 +14,7 @@ var html = new RadialProgressChart('#html', {
         duration: 2500
   },
   series: [{
-    value: 100,
+    value: 95,
     color: ['#7F00BA', '#7F00BA']
   }],
   center: function(d) {
@@ -28,7 +33,7 @@ var css = new RadialProgressChart('#css', {
         duration: 2500
   },
   series: [{
-    value: 95,
+    value: 90,
     color: ['#7F00BA', '#7F00BA']
   }],
   center: function(d) {
@@ -157,15 +162,15 @@ $('#fullpage').fullpage({
     
     if(nextIndex == 2) {
     	html.update(1);
-	    html.update(100);
+	    html.update(95);
 	    css.update(1);
-	    css.update(95);
+	    css.update(90);
 	    js.update(1);
-	    js.update(80);
+	    js.update(75);
 	    wp.update(1);
-	    wp.update(85);
+	    wp.update(80);
 	    php.update(1);
-	    php.update(75);
+	    php.update(70);
     }
  
     if($(window).width() > 1100) {
@@ -288,35 +293,35 @@ $('#fullpage').fullpage({
 });
 /* End fullPage.js */
 
+function hello() {
+  $('#hello').delay(500).animate({
+    top: '2vh'
+  },350,'swing').animate({
+    top: '-1vh'
+  },150,'swing').animate({
+    top: '0vh'
+  },100,'swing');
 
-$('#hello').delay(500).animate({
-  top: '2vh'
-},350,'swing').animate({
-  top: '-1vh'
-},150,'swing').animate({
-  top: '0vh'
-},100,'swing');
+  $('#period').delay(1100).animate({
+    top: '2vh'
+  },200,'swing').animate({
+    top: '-1vh'
+  },150,'swing').animate({
+    top: '0vh'
+  },100,'swing');
 
-$('#period').delay(1100).animate({
-  top: '2vh'
-},200,'swing').animate({
-  top: '-1vh'
-},150,'swing').animate({
-  top: '0vh'
-},100,'swing');
+  $('#myName').delay(1700).animate({
+    right: '2vw'
+  },350,'swing').animate({
+    right: '-1vw'
+  },150, 'swing').animate({
+    right: '0vw'
+  },100,'swing');
 
-$('#myName').delay(1700).animate({
-  right: '2vw'
-},350,'swing').animate({
-  right: '-1vw'
-},150, 'swing').animate({
-  right: '0vw'
-},100,'swing');
-
-$('#scroll').delay(3100).animate({
-  opacity: '1'
-},350);
-
+  $('#scroll').delay(3100).animate({
+    opacity: '1'
+  },350);
+}
 
  // portfolio
  $('.gallery ul li a').click(function() {
