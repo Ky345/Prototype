@@ -11,7 +11,7 @@ var html = new RadialProgressChart('#html', {
   	width: 0
   },
   animation: {
-        duration: 2500
+        duration: 0
   },
   series: [{
     value: 95,
@@ -30,7 +30,7 @@ var css = new RadialProgressChart('#css', {
   	width: 0
   },
   animation: {
-        duration: 2500
+        duration: 0
   },
   series: [{
     value: 90,
@@ -48,7 +48,7 @@ var js = new RadialProgressChart('#js', {
   	width: 0
   },
   animation: {
-        duration: 2500
+        duration: 0
   },
   series: [{
     value: 80,
@@ -321,6 +321,16 @@ function hello() {
   $('#scroll').delay(3100).animate({
     opacity: '1'
   },350);
+  html.update(1);
+  html.update(95);
+  css.update(1);
+  css.update(90);
+  js.update(1);
+  js.update(75);
+  wp.update(1);
+  wp.update(80);
+  php.update(1);
+  php.update(70);
 }
 
  // portfolio
