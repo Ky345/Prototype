@@ -4,9 +4,9 @@ window.addEventListener('load', function(){
 });
 
 var html = new RadialProgressChart('#html', {
-  diameter: 200,
+  diameter: 250,
   max: 100,
-  round: false,
+  round: true,
   shadow: {
   	width: 0
   },
@@ -18,14 +18,14 @@ var html = new RadialProgressChart('#html', {
     color: ['#7F00BA', '#7F00BA']
   }],
   center: function(d) {
-    return 'HTML';
+    return 'HTML ' + d +'%';
   }
 });
 
 var css = new RadialProgressChart('#css', {
-  diameter: 200,
+  diameter: 250,
   max: 100,
-  round: false,
+  round: true,
   shadow: {
   	width: 0
   },
@@ -37,13 +37,13 @@ var css = new RadialProgressChart('#css', {
     color: ['#7F00BA', '#7F00BA']
   }],
   center: function(d) {
-    return 'CSS';
+    return 'CSS ' + d +'%';
   }
 });
 var js = new RadialProgressChart('#js', {
-  diameter: 200,
+  diameter: 250,
   max: 100,
-  round: false,
+  round: true,
   shadow: {
   	width: 0
   },
@@ -55,13 +55,13 @@ var js = new RadialProgressChart('#js', {
     color: ['#7F00BA', '#7F00BA']
   }],
   center: function(d) {
-    return 'JS';
+    return 'JS ' + d +'%';
   }
 });
 var wp = new RadialProgressChart('#wp', {
-  diameter: 200,
+  diameter: 250,
   max: 100,
-  round: false,
+  round: true,
   shadow: {
   	width: 0
   },
@@ -73,13 +73,13 @@ var wp = new RadialProgressChart('#wp', {
     color: ['#7F00BA', '#7F00BA']
   }],
   center: function(d) {
-    return 'WordPress';
+    return 'WordPress ' + d +'%';
   }
 });
 var php = new RadialProgressChart('#php', {
-  diameter: 200,
+  diameter: 250,
   max: 100,
-  round: false,
+  round: true,
   shadow: {
   	width: 0
   },
@@ -91,7 +91,7 @@ var php = new RadialProgressChart('#php', {
     color: ['#7F00BA', '#7F00BA']
   }],
   center: function(d) {
-    return 'PHP';
+    return 'PHP ' + d +'%';
   }
 });
 
